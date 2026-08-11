@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/heypandax/cc-pocket/releases/download/v1.7.6/cc-pocket-daemon-1.7.6-windows-x86_64.zip",
-      "hash": "7fbeab6a22a529d1e34c0178daaf1e43ace600ed1d68ca51644455f08a5fcf93"
+      "hash": "c3a5c436b5d8877f0bbad9cb0d1e36093863a1431f690b33b798fcac4af6f6df"
     }
   },
   "extract_dir": "cc-pocket-daemon",
