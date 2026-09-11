@@ -1,22 +1,28 @@
 {
-  "version": "1.9.8",
-  "description": "Drive Claude Code from your phone — the cc-pocket daemon.",
+  "version": "2.0.0",
+  "description": "Pairlet (formerly CC Pocket) daemon.",
   "homepage": "https://github.com/heypandax/cc-pocket",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/heypandax/cc-pocket/releases/download/v1.9.8/cc-pocket-daemon-1.9.8-windows-x86_64.zip",
-      "hash": "f75340fab9d00a7501b5abb9ddfd249bc002f888530b5b8670605c0344553c24"
+      "url": "https://github.com/heypandax/cc-pocket/releases/download/v2.0.0/cc-pocket-daemon-2.0.0-windows-x86_64.zip",
+      "hash": "0eb5ae901cb98454e7ca94fc734674405ab253c2a0db69338e2342905670c5ac"
     }
   },
   "extract_dir": "cc-pocket-daemon",
-  "bin": "cc-pocket-daemon.exe",
+  "bin": [
+    "cc-pocket-daemon.exe",
+    [
+      "cc-pocket-daemon.exe",
+      "pairlet"
+    ]
+  ],
   "post_install": [
     "try { & \"$dir\\cc-pocket-daemon.exe\" service-install --apply | Write-Host } catch { Write-Host \"service-install skipped (you can run it by hand): $_\" }"
   ],
   "notes": [
     "The daemon now runs in the background (a logon Scheduled Task was registered).",
-    "Pair your phone:   cc-pocket-daemon pair",
+    "Pair your phone:   pairlet pair (cc-pocket-daemon is also supported)",
     "Requires the Claude Code CLI on PATH or at ~\\.local\\bin\\claude.exe — the daemon drives it."
   ],
   "checkver": "github",
